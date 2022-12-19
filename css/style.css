@@ -65,6 +65,10 @@ textarea {
     font-weight: 300;
 }
 
+.form-check-input:focus {
+    box-shadow: none;
+}
+
 input::placeholder,
 textarea::placeholder {
     color: #a6a6ac;
@@ -266,7 +270,7 @@ button {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 9;
+    z-index: 99;
 }
 
 .tf__topbar_left li a,
@@ -669,6 +673,8 @@ button {
     color: var(--colorWhite);
 }
 
+.related_service_slider .nextArrow,
+.related_service_slider .prevArrow,
 .testi_slider .nextArrow,
 .testi_slider .prevArrow,
 .futere_slider .nextArrow,
@@ -695,11 +701,14 @@ button {
     -o-transition: all linear .3s;
 }
 
+.related_service_slider .prevArrow,
 .testi_slider .prevArrow,
 .futere_slider .prevArrow {
     right: 60px;
 }
 
+.related_service_slider .nextArrow:hover,
+.related_service_slider .prevArrow:hover,
 .testi_slider .nextArrow:hover,
 .testi_slider .prevArrow:hover,
 .futere_slider .nextArrow:hover,
@@ -722,7 +731,7 @@ button {
 .tf_about_text_center {
     padding: 35px;
     background: var(--colorWhite);
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 5px rgb(0 0 0 / 15%);
     border-radius: 5px;
 }
 
@@ -1545,6 +1554,8 @@ button {
 ================================*/
 .tf__single_team {
     margin-top: 25px;
+    overflow: hidden;
+    border-radius: 5px;
 }
 
 .tf__single_team_img {
@@ -1609,6 +1620,23 @@ button {
     -moz-transition: all linear .3s;
     -ms-transition: all linear .3s;
     -o-transition: all linear .3s;
+    position: relative;
+}
+
+.tf__single_team_text::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 8px;
+    bottom: -12px;
+    left: 0;
+    background: var(--colorBlack);
+    opacity: 0;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
 }
 
 .tf__single_team_text .title {
@@ -1651,6 +1679,10 @@ button {
     -o-transform: scale(1.1);
 }
 
+.tf__single_team_text .title:hover {
+    color: var(--colorBlack);
+}
+
 .tf__single_team:hover ul {
     transform: scale(1);
     opacity: 1;
@@ -1660,10 +1692,14 @@ button {
     -o-transform: scale(1);
 }
 
+.tf__single_team:hover .tf__single_team_text::after {
+    bottom: 0;
+    opacity: 1;
+}
+
 /*================================
     COUNTER END
 ================================*/
-
 
 
 /*================================
@@ -2312,14 +2348,18 @@ button {
 }
 
 .tf__about_page_welcome_text ul,
-.tf__about_page_welcome_text ol {
+.tf__about_page_welcome_text ol,
+.tf__services_details_text ul,
+.tf__services_details_text ol {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .tf__about_page_welcome_text ul li,
-.tf__about_page_welcome_text ol li {
+.tf__about_page_welcome_text ol li,
+.tf__services_details_text ul li,
+.tf__services_details_text ol li {
     font-size: 18px;
     columns: var(--colorBlack);
     padding-left: 30px;
@@ -2329,7 +2369,9 @@ button {
 }
 
 .tf__about_page_welcome_text ul li::after,
-.tf__about_page_welcome_text ol li::after {
+.tf__about_page_welcome_text ol li::after,
+.tf__services_details_text ul li::after,
+.tf__services_details_text ol li::after {
     position: absolute;
     content: "";
     background: url(../images/about_welcome_icon.png);
@@ -2468,7 +2510,7 @@ button {
     background-position: center !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
-    height: 500px;
+    height: 550px;
     margin-bottom: 300px;
 }
 
@@ -2477,7 +2519,7 @@ button {
     background: var(--colorPrimary);
     border-radius: 5px;
     position: relative;
-    bottom: -350px;
+    bottom: -400px;
     height: 450px;
 }
 
@@ -2489,7 +2531,8 @@ button {
     -o-border-radius: 5px;
 }
 
-.tf__mission_video a {
+.tf__mission_video a,
+.tf__services_det_video a {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -2506,7 +2549,8 @@ button {
     -o-transform: translate(-50%, -50%);
 }
 
-.tf__mission_video a::before {
+.tf__mission_video a::before,
+.tf__services_det_video a::before {
     border: 10px solid var(--colorWhite);
 }
 
@@ -2704,11 +2748,843 @@ button {
 ================================*/
 
 
+/*================================
+    PAGINATION START
+================================*/
+.tf__pagination ul li a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    padding: 0;
+    color: var(--colorPrimary);
+    border: 1px solid var(--colorPrimary);
+    border-radius: 3px !important;
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.tf__pagination ul li a:hover,
+.tf__pagination ul li.active a {
+    background: var(--colorPrimary);
+    color: var(--colorWhite);
+    border-color: var(--colorPrimary);
+}
+
+.tf__pagination ul li a:focus {
+    color: var(--colorWhite);
+    background-color: var(--colorPrimary);
+    box-shadow: 0px 0px 0px 2px #e05e44;
+}
+
+/*================================
+    PAGINATION END
+================================*/
 
 
+/*================================
+    SERVICE DETAILS START
+================================*/
+.tf__services_details_text h1,
+.tf__services_details_text h2 {
+    font-size: 44px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.tf__services_details_text h1,
+.tf__services_details_text h2,
+.tf__services_details_text h3,
+.tf__services_details_text h4,
+.tf__services_details_text h5,
+.tf__services_details_text h6 {
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-top: 25px;
+}
+
+.tf__services_details_text h1 {
+    font-size: 40px;
+}
+
+.tf__services_details_text h2 {
+    font-size: 35px;
+}
+
+.tf__services_details_text h3 {
+    font-size: 30px;
+}
+
+.tf__services_details_text h4 {
+    font-size: 25px;
+}
+
+.tf__services_details_text h5 {
+    font-size: 20px;
+}
+
+.tf__services_details_text h6 {
+    font-size: 16px;
+}
+
+.tf__services_details_text p {
+    margin-top: 25px;
+}
+
+.tf__services_details_text .title {
+    margin-top: 0;
+}
+
+.tf__services_det_center_img {
+    height: 280px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 25px;
+}
+
+.tf__services_det_video {
+    height: 420px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 25px;
+    position: relative;
+}
+
+.tf_service_det_tag {
+    justify-content: space-between;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0px;
+    margin-top: 25px;
+}
+
+.tf_service_det_tag .tag_list li,
+.tf_service_det_tag .share li {
+    display: flex;
+    align-items: center;
+}
+
+.tf_service_det_tag .tag_list li span,
+.tf_service_det_tag .share li span {
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.tf_service_det_tag .tag_list li span i,
+.tf_service_det_tag .share li span i {
+    margin-right: 10px;
+    color: var(--colorPrimary);
+}
+
+.tf_service_det_tag .tag_list li a,
+.tf_service_det_tag .share li a {
+    background: #FFF5F4;
+    padding: 2px 10px 3px 10px;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--colorBlack);
+    margin-left: 15px;
+    border-radius: 3px;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.tf_service_det_tag .tag_list li a:hover,
+.tf_service_det_tag .share li a:hover {
+    background: var(--colorPrimary);
+    color: var(--colorWhite);
+}
+
+.tf_service_det_tag .share li a {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    padding: 0;
+    border-radius: 50%;
+    color: var(--colorPrimary);
+}
+
+.tf_service_det_btn_area ul {
+    justify-content: space-between;
+}
+
+.tf_service_det_btn_area ul li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 40%;
+    margin-top: 25px;
+}
+
+.tf_service_det_btn_area ul li .img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 15px;
+}
+
+.tf_service_det_btn_area ul li .text {
+    max-width: 220px;
+    display: block;
+}
+
+.tf_service_det_btn_area ul li .text span {
+    display: block;
+    font-weight: 600;
+    color: var(--colorBlack);
+    text-transform: capitalize;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.tf_service_det_btn_area ul li .text span i {
+    margin-left: 5px;
+    color: var(--colorPrimary);
+}
+
+.tf_service_det_btn_area ul li .text p {
+    text-transform: capitalize;
+    margin-top: 5px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.tf_service_det_btn_area ul li a:hover span {
+    color: var(--colorPrimary);
+}
+
+.tf_service_det_btn_area ul li:last-child .img {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+.tf_service_det_btn_area ul li:last-child span {
+    text-align: right;
+}
+
+.tf_service_det_btn_area ul li:last-child span i {
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+.tf_service_det_btn_area ul li:last-child p {
+    text-align: right;
+}
+
+.tf__service_review_list h3,
+.tf__service_review_input h3 {
+    font-size: 36px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.tf__single_review {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: 1px solid #ddd;
+    padding-top: 25px;
+    margin-top: 25px;
+}
+
+.tf__single_review .review_img {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.tf__single_review .review_text {
+    width: 80%;
+}
+
+.tf__single_review .review_text h4 {
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: capitalize;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tf__single_review .review_text h4 span {
+    color: var(--colorPrimary);
+    text-transform: capitalize;
+}
+
+.tf__single_review .review_text .review_star {
+    color: var(--colorPrimary);
+    margin: 10px 0px 5px 0px;
+}
+
+.tf__single_review .review_text .review_star span {
+    color: var(--colorBlack);
+    margin-left: 10px;
+}
+
+.tf__single_review .review_text .reply {
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--colorBlack);
+    transition: all linear .3s;
+    text-decoration: underline;
+    display: inline-block;
+    margin-top: 5px;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.tf__single_review .review_text .reply:hover {
+    color: var(--colorPrimary);
+    text-decoration: none;
+}
+
+.tf__single_review.reply {
+    padding-left: 50px;
+}
+
+.tf__single_review.reply .review_text {
+    width: 78%;
+}
+
+.tf__service_review_input p {
+    margin-top: 15px;
+}
+
+.tf__service_review_input p span {
+    color: var(--colorPrimary);
+    cursor: pointer;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.tf__service_review_input p span:hover {
+    color: var(--colorBlack);
+}
+
+.tf__service_review_input input,
+.tf__service_review_input textarea {
+    background: #FFF5F4;
+    border-radius: 5px;
+    border: none;
+    margin-top: 25px;
+    color: var(--colorBlack);
+}
+
+.tf__service_review_input .form-check {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.tf__service_review_input .form-check input {
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    border: 1px solid var(--colorPrimary);
+    border-radius: 50%;
+    margin-top: 0;
+}
+
+.tf__service_review_input input::placeholder,
+.tf__service_review_input textarea::placeholder {
+    color: var(--colorBlack);
+}
+
+.tf__service_review_input .form-check input:checked {
+    background-color: var(--colorPrimary);
+    border-color: var(--colorPrimary);
+}
+
+.tf__service_review_input .form-check input::placeholder {
+    color: var(--colorBlack) !important;
+}
+
+.tf__service_review_input .form-check label {
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.sidebar_item {
+    background: #FFF5F4;
+    border-radius: 5px;
+    padding: 25px;
+}
+
+.sidebar_item h3 {
+    font-weight: 600;
+    font-size: 24px;
+    padding-left: 20px;
+    text-transform: capitalize;
+    position: relative;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.sidebar_item h3::after {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 26px;
+    background: var(--colorPrimary);
+    border-radius: 30px;
+    top: 1px;
+    left: 0;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+.tf__sidebar_search form {
+    position: relative;
+}
+
+.tf__sidebar_search form input {
+    border: 0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.tf__sidebar_search form button {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    background: var(--colorPrimary);
+    color: var(--colorWhite);
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transition: all linear .3s;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.tf__sidebar_search form button:hover {
+    background: var(--colorBlack);
+}
+
+.tf__sidebar_category ul li a {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--colorBlack);
+    background: var(--colorWhite);
+    padding: 10px 20px 10px 35px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.tf__sidebar_category ul li a::after {
+    position: absolute;
+    content: "\f054";
+    font-family: "font awesome 5 free";
+    font-weight: 600;
+    top: 14px;
+    left: 20px;
+    font-size: 12px;
+    color: var(--paraColor);
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.tf__sidebar_category ul li:last-child a {
+    margin-bottom: 0;
+}
+
+.tf__sidebar_category ul li a span {
+    color: var(--colorBlack);
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.tf__sidebar_category ul li a:hover {
+    background: var(--colorPrimary);
+    color: var(--colorWhite);
+}
+
+.tf__sidebar_category ul li a:hover span {
+    color: var(--colorWhite);
+}
+
+.tf__sidebar_category ul li a:hover::after {
+    color: var(--colorWhite);
+}
+
+.tf__sidebar_time p {
+    text-transform: capitalize;
+    color: var(--colorBlack);
+}
+
+.tf__sidebar_mail {
+    text-align: center;
+}
+
+.tf__sidebar_mail .img {
+    border-radius: 5px;
+    overflow: hidden;
+    height: 180px;
+}
+
+.tf__sidebar_mail h5 {
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #777C90;
+    margin: 15px 35px;
+}
+
+.tf__sidebar_mail p {
+    color: var(--colorBlack);
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.tf__related_service h3 {
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.related_service_slider .nextArrow,
+.related_service_slider .prevArrow {
+    top: -90px;
+}
+
+.tf__related_service .tf__services_item {
+    margin: 0px 12px;
+}
+
+#sticky_sidebar {
+    z-index: 90 !important;
+}
+
+/*================================
+    SERVICE DETAILS END
+================================*/
 
 
+/*================================
+    TEAM DETAILS START
+================================*/
+.tf__team_sidebar {
+    padding: 25px;
+    background: #FFF5F4;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
 
+.tf__team_sidebar .img {
+    height: 380px;
+    overflow: hidden;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.tf__team_sidebar .title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+.tf__team_sidebar .designation {
+    font-size: 17px;
+    text-align: center;
+}
+
+.tf__team_sidebar .follow_area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 25px 0px 25px 0px;
+}
+
+.tf__team_sidebar .follow_area li {
+    width: 50%;
+}
+
+.tf__team_sidebar .follow_area li h5 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.tf__team_sidebar .follow_area li p {
+    font-size: 18px;
+    text-align: center;
+}
+
+.tf__team_sidebar .read_btn {
+    width: 100%;
+    text-align: center;
+    padding: 15px 30px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.tf__team_sidebar .read_btn i {
+    margin-left: 5px;
+}
+
+.tf__team_sidebar .read_btn::after {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+.tf__team_sidebar_details li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 20px 0px 20px 40px;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.tf__team_sidebar_details li span {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    background: var(--colorBlack);
+    color: var(--colorWhite);
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+}
+
+.tf__team_sidebar_details li h5 {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.tf__team_sidebar_details li p {
+    font-size: 17px;
+}
+
+.follow_link h5 {
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.follow_link ul li a {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: var(--colorPrimary);
+    border: 1px solid var(--colorPrimary);
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+.follow_link ul li a:hover {
+    background: var(--colorPrimary);
+    color: var(--colorWhite);
+}
+
+.tf__team_details_text h3 {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.tf__team_details_text p {
+    margin-top: 20px;
+}
+
+.tf__team_Statictics h2 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.tf__team_Statictics h2::after {
+    position: absolute;
+    content: "";
+    background: url(../images/team_details_shapes.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 80px;
+    height: 5px;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tf__team_Statictics p {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 0;
+}
+
+.tf__team_skills_bar p {
+    margin-bottom: 20px;
+}
+
+.tf__team_skills_bar_single p {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--colorBlack);
+    margin: 0px 0px 10px 0px;
+}
+
+.tf__team_skills_img {
+    height: 350px;
+    position: relative;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    z-index: 1;
+}
+
+.tf__team_skills_img img {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.tf__team_skills_img::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 113%;
+    background: var(--colorPrimary);
+    bottom: -25px;
+    right: -25px;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+.tf__team_qualification_single {
+    background: #FFF5F4;
+    border-radius: 5px;
+    padding: 25px;
+    margin-top: 25px;
+}
+
+.tf__team_qualification_single i {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: var(--colorPrimary);
+    color: var(--colorWhite);
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+.tf__team_qualification_single h4 {
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 20px 0px 10px 0px;
+}
+
+.tf__team_qualification_single span {
+    display: block;
+    text-align: center;
+    font-weight: 500;
+    color: var(--colorPrimary);
+}
+
+.tf__team_qualification_single h6 {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    margin: 10px 0px 15px 1px;
+}
+
+.tf__team_qualification_single p {
+    text-align: center;
+    margin: 0;
+}
+
+/*================================
+    TEAM DETAILS END
+================================*/
 
 
 
@@ -2718,4 +3594,101 @@ button {
 
 /*================================
     END
+================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*================================
+    FAQ START
+================================*/
+
+.accordion-item {
+    background-color: var(--colorWhite);
+    border: none;
+    margin-bottom: 25px;
+}
+
+.accordion-button {
+    background: #FFF5F4;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--colorBlack);
+    padding: 15px 50px 15px 15px;
+    position: relative;
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--colorWhite);
+    background-color: var(--colorPrimary);
+    box-shadow: none;
+}
+
+.accordion-body {
+    padding: 20px;
+    background: #FFFFFF;
+    box-shadow: 5px 8px 30px rgba(5, 13, 54, 0.05);
+}
+
+.accordion-button::after {
+    background: url(../images/faq_plus.jpg);
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border-radius: 50%;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background: url(../images/faq_minus.jpg);
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border-radius: 50%;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+/*================================
+    FAQ END
 ================================*/

@@ -140,6 +140,94 @@ $(function () {
     $('.counter').countUp();
 
 
+    //=======OFFER ITEM SLIDER======
+    $('.related_service_slider').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        dots: false,
+        arrows: true,
+        nextArrow: '<i class="far fa-long-arrow-right nextArrow"></i>',
+        prevArrow: '<i class="far fa-long-arrow-left prevArrow"></i>',
+
+        responsive: [
+            {
+                breakpoint: 1400,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+
+
+    //*========STICKY SIDEBAR=======
+    $("#sticky_sidebar").stickit({
+        top: 100,
+    })
+
+
+    //====BARFILLER JS========
+    $(document).ready(function () {
+        $('#bar1').barfiller({ barColor: '#faa392' });
+        $('#bar2').barfiller({ barColor: '#faa392' });
+        $('#bar3').barfiller({ barColor: '#faa392' });
+        $('#bar4').barfiller({ barColor: '#faa392' });
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 });
+
+
+
+
+
+
+
+
