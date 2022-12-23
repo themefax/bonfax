@@ -16,6 +16,17 @@ $(function () {
         });
     }
 
+
+    //=======MENU SEARCH======
+    $(".menu_search").click(function () {
+        $(".tf__search_form").addClass("show");
+    });
+
+    $(".close_search").click(function () {
+        $(".tf__search_form").removeClass("show");
+    });
+
+
     //=======VENOBOS.JS======
     $('.venobox').venobox();
 
@@ -215,24 +226,19 @@ $(function () {
     });
 
 
+    //=====NICE SELECT=======
+    $('#select_js').niceSelect();
+    $('#select_js2').niceSelect();
 
 
+    //=====DASHBOARD EDIT INFORMATION=======
+    $(".info_edit_btn").on("click", function () {
+        $(".tf_personal_area").addClass("edit_form");
+    });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    $(".info_edit_cancel_btn").on("click", function () {
+        $(".tf_personal_area").removeClass("edit_form");
+    });
 
 });
 
