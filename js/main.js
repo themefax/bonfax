@@ -31,8 +31,8 @@ $(function () {
     $('.venobox').venobox();
 
 
-    //=======OFFER ITEM SLIDER======
-    $('.futere_slider').slick({
+    //=======FUTURED SERVICE SLIDER======
+    $('.futured_slider').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
@@ -151,7 +151,7 @@ $(function () {
     $('.counter').countUp();
 
 
-    //=======OFFER ITEM SLIDER======
+    //=======RELATED SERVICES SLIDER======
     $('.related_service_slider').slick({
         slidesToShow: 2,
         slidesToScroll: 1,
@@ -229,6 +229,9 @@ $(function () {
     //=====NICE SELECT=======
     $('#select_js').niceSelect();
     $('#select_js2').niceSelect();
+    $('#select_js3').niceSelect();
+    $('#select_js4').niceSelect();
+    $('#select_js5').niceSelect();
 
 
     //=====DASHBOARD EDIT INFORMATION=======
@@ -240,12 +243,75 @@ $(function () {
         $(".tf_personal_area").removeClass("edit_form");
     });
 
+
+    //======SCROLL BUTTON=======
+    $('.tf__scroll_btn').on('click', function () {
+        $('html, body').animate({
+            scrollTop: 0,
+        }, 300);
+    });
+
+    $(window).on('scroll', function () {
+        var scrolling = $(this).scrollTop();
+
+        if (scrolling > 300) {
+            $('.tf__scroll_btn').fadeIn();
+        } else {
+            $('.tf__scroll_btn').fadeOut();
+        }
+    });
+
+
+
+    //=======FUTURED SERVICE 2 SLIDER======
+    $('.futures_slider_2').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        dots: true,
+        arrows: false,
+
+        responsive: [
+            {
+                breakpoint: 1400,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+
+
+
+
+
+
+
+
+
 });
-
-
-
-
-
-
-
-
