@@ -75,7 +75,7 @@ $(function () {
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                 }
             },
             {
@@ -138,7 +138,7 @@ $(function () {
     init_pointer({})
 
 
-    //======ISOTOPE JS========= 
+    //======GALLERY JS========= 
     var $grid = $('.grid').isotope({});
 
     $('.tf__gallery_filter').on('click', 'button', function () {
@@ -150,6 +150,25 @@ $(function () {
 
     //active class
     $('.tf__gallery_filter button').on("click", function (event) {
+
+        $(this).siblings('.active').removeClass('active');
+        $(this).addClass('active');
+        event.preventDefault();
+
+    });
+
+    //=======GALLERY 2 JS========= 
+    var $grid2 = $('.grid2').isotope({});
+
+    $('.tf__gallery_filter_2').on('click', 'button', function () {
+        var filterValue = $(this).attr('data-filter');
+        $grid2.isotope({
+            filter: filterValue
+        });
+    });
+
+    //active class
+    $('.tf__gallery_filter_2 button').on("click", function (event) {
 
         $(this).siblings('.active').removeClass('active');
         $(this).addClass('active');
@@ -243,6 +262,7 @@ $(function () {
     $('#select_js3').niceSelect();
     $('#select_js4').niceSelect();
     $('#select_js5').niceSelect();
+    $('#select_js6').niceSelect();
 
 
     //=====DASHBOARD EDIT INFORMATION=======
@@ -321,5 +341,8 @@ $(function () {
     //==========WOW JS==========
     new WOW().init();
 
+    $(".navbar-toggler").on("click", function () {
+        $(".navbar-toggler").toggleClass("show_close");
+    });
 
 });
