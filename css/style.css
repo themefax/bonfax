@@ -2523,7 +2523,7 @@ button {
 .tf__footer_link p i {
     width: 35px;
     height: 35px;
-    line-height: 35px;
+    line-height: 37px;
     text-align: center;
     background: var(--colorWhite);
     color: var(--colorPrimary);
@@ -7280,6 +7280,14 @@ button {
 .tf__footer_2 .tf__footer_subscribe_form form,
 .tf__footer_2 .tf__footer_subscribe_form button {
     border-radius: 5px;
+}
+
+.tf__footer_2 .tf__footer_subscribe_form button::after {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
 }
 
 .tf__footer_2 .tf__footer_logo_area ul li a,

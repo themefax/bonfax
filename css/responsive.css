@@ -265,6 +265,11 @@
         margin-left: 10px;
     }
 
+    .vbox-content {
+        max-width: 700px;
+        max-height: 450px;
+    }
+
     .tf__single_counter_center {
         width: 180px;
         height: 180px;
@@ -664,6 +669,10 @@
 
     .tf__gallery_filter button {
         margin-top: 3px;
+    }
+
+    .vbox-content {
+        max-width: 85%;
     }
 
     /* gallery end */
@@ -1093,7 +1102,7 @@
     }
 
     .tf__work_single {
-        border: 15px solid var(--colorBlack);
+        border: 20px solid var(--colorBlack);
         width: 270px;
         height: 270px;
         margin: 25px auto 0 auto !important;
@@ -1132,6 +1141,10 @@
 
     .tf__gallery_item .venobox span {
         bottom: 35px;
+    }
+
+    .vbox-content {
+        max-width: 85%;
     }
 
     /* gallery end */
@@ -1651,6 +1664,11 @@
 
     .tf__gallery_item .venobox span {
         bottom: 35px;
+    }
+
+    .vbox-content {
+        max-width: 320px;
+        max-height: 280px;
     }
 
     /* gallery end */
