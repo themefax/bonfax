@@ -418,11 +418,11 @@ button {
     left: 0;
     border-bottom: 1px solid #eee;
     z-index: 999;
-    transition: all linear .3s;
-    -webkit-transition: all linear .3s;
-    -moz-transition: all linear .3s;
-    -ms-transition: all linear .3s;
-    -o-transition: all linear .3s;
+    transition: all linear .2s;
+    -webkit-transition: all linear .2s;
+    -moz-transition: all linear .2s;
+    -ms-transition: all linear .2s;
+    -o-transition: all linear .2s;
 }
 
 .main_menu .navbar-brand {
@@ -2651,7 +2651,7 @@ button {
 
 .tf__breadcrumb_overlay {
     background: linear-gradient(180deg, rgba(250, 163, 146, 0.6) 0%, rgba(0, 38, 51, 0.6) 57.04%);
-    padding: 125px 0px 130px 0px;
+    padding: 125px 0px 125px 0px;
 }
 
 .tf__breadcrumb_text h1 {

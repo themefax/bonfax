@@ -31,7 +31,7 @@ $(function () {
     $('.banner_slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 4000,
         dots: true,
         arrows: false,

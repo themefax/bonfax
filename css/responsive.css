@@ -112,7 +112,60 @@
     ================================*/
 
 
+    /*================================
+        404 PAGE START
+    ================================*/
+    .tf___404_text .img {
+        height: 340px;
+    }
 
+    /*================================
+        404 PAGE END
+    ================================*/
+
+
+    /*================================
+        ABOUT PAGE START
+    ================================*/
+    .tf__about_page_about_img .img_2 {
+        right: -40px;
+    }
+
+    .tf__about_page_about_img::after {
+        top: 90px;
+        right: 0px;
+    }
+
+    .tf__vission_img_small {
+        height: 130px;
+    }
+
+    .tf__award_text ul li,
+    .tf__award_text ol li {
+        width: 100%;
+    }
+
+    .tf__award_img {
+        height: 530px;
+        padding: 20px;
+        margin: 0;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*================================
+        ABOUT PAGE END
+    ================================*/
 
 
 
@@ -276,8 +329,8 @@
     }
 
     .tf__single_counter_center h2 {
-        width: 143px;
-        height: 143px;
+        width: 141px;
+        height: 141px;
         line-height: 143px;
     }
 
@@ -338,7 +391,159 @@
     ================================*/
 
 
+    /*================================
+        404 PAGE START
+    ================================*/
+    .tf___404 {
+        padding-top: 140px;
+    }
 
+    .tf___404_text .img {
+        width: 450px;
+        height: 240px;
+        margin: 0 auto;
+    }
+
+    /*================================
+        404 PAGE END
+    ================================*/
+
+
+    /*================================
+        ABOUT PAGE START
+    ================================*/
+    .tf__breadcrumb {
+        margin-top: 140px;
+    }
+
+    .tf__breadcrumb_overlay {
+        padding: 125px 0px 130px 0px;
+    }
+
+    .tf__breadcrumb_text h1 {
+        font-size: 55px;
+    }
+
+    .tf__about_page_welcome_img {
+        padding-right: 0;
+    }
+
+    .tf__about_page_about_img p {
+        bottom: -55px;
+    }
+
+    .tf__about_page_welcome_img .call_area {
+        padding: 15px;
+        top: auto;
+        bottom: 20px;
+        transform: translate(0);
+        -webkit-transform: translate(0);
+        -moz-transform: translate(0);
+        -ms-transform: translate(0);
+        -o-transform: translate(0);
+        width: 80%;
+    }
+
+    .tf__about_page_welcome_img .call p {
+        width: 75%;
+    }
+
+    .tf_about_2_text ul li,
+    .tf_about_2_text ol li,
+    .tf__about_page_welcome_text ul li,
+    .tf__about_page_welcome_text ol li,
+    .tf__services_details_text ul li,
+    .tf__services_details_text ol li {
+        font-size: 14px;
+    }
+
+    .tf_about_2_text ul li::after,
+    .tf_about_2_text ol li::after,
+    .tf__about_page_welcome_text ul li::after,
+    .tf__about_page_welcome_text ol li::after,
+    .tf__services_details_text ul li::after,
+    .tf__services_details_text ol li::after {
+        top: 0px;
+    }
+
+    .tf__about_page_welcome_img .call p span {
+        display: inline-block;
+        font-weight: 600;
+    }
+
+    .tf__about_page_welcome_text h2,
+    .tf__about_page_welcome_text h3,
+    .tf__about_page_welcome_text h4,
+    .tf__about_page_welcome_text h5 {
+        font-size: 35px;
+    }
+
+    .tf__about_page_about_img .img_1 {
+        height: 500px;
+        margin-bottom: 35px;
+        width: 450px;
+    }
+
+    .tf__about_page_about_img .img_2 {
+        width: 300px;
+        height: 230px;
+    }
+
+    .tf__about_page_about_text a {
+        margin-top: 20px;
+    }
+
+    .tf__mission_text h3 {
+        font-size: 35px;
+    }
+
+    .tf__mission_video_area {
+        height: 400px;
+        margin-bottom: 270px;
+    }
+
+    .tf__mission_video {
+        bottom: -220px;
+        height: 450px;
+    }
+
+    .tf__vission_img_small {
+        height: 100px;
+    }
+
+    .tf__vission_img_large {
+        height: 480px;
+    }
+
+    .tf_partnership h2 {
+        font-size: 35px;
+    }
+
+    .tf_partner_single {
+        height: 350px;
+    }
+
+    .tf_partner_overlay h3 {
+        font-size: 20px;
+    }
+
+    .tf__award_img {
+        height: 370px;
+    }
+
+    .tf__award_img .award_small_img {
+        width: 250px;
+        height: 180px;
+    }
+
+    .tf__award_text ul li,
+    .tf__award_text ol li {
+        width: 100%;
+    }
+
+    /*================================
+        ABOUT PAGE END
+    ================================*/
 
 
 
@@ -353,12 +558,6 @@
         HOME PAGE START
     ================================*/
     /* topbar start */
-    .tf__topbar {
-        height: auto;
-        padding: 5px 0px 7px 0px;
-        position: static;
-    }
-
     .tf__topbar_left {
         justify-content: center !important;
     }
@@ -368,7 +567,6 @@
         width: 25px;
         height: 25px;
         line-height: 27px;
-        margin-right: 0;
         font-size: 13px;
     }
 
@@ -382,7 +580,6 @@
     /* menu start */
     .main_menu {
         height: 75px;
-        top: 60px;
         border-bottom: 1px solid var(--colorPrimary);
     }
 
@@ -444,7 +641,7 @@
     /* banner start */
     .tf__banner {
         height: auto;
-        padding-top: 72px;
+        padding-top: 124px;
         overflow: hidden;
     }
 
@@ -779,6 +976,144 @@
     ================================*/
 
 
+    /*================================
+        404 PAGE START
+    ================================*/
+    .tf___404 {
+        padding-top: 75px;
+    }
+
+    .tf___404_text .img {
+        width: 450px;
+        height: 240px;
+        margin: 0 auto;
+    }
+
+    /*================================
+        404 PAGE END
+    ================================*/
+
+    /*================================
+        ABOUT PAGE START
+    ================================*/
+    .tf__breadcrumb {
+        margin-top: 124px;
+    }
+
+    .tf__breadcrumb_text h1 {
+        font-size: 45px;
+    }
+
+    .tf__about_page_welcome_img {
+        height: 500px;
+        padding-right: 0;
+        width: 500px;
+        margin-bottom: 20px;
+    }
+
+    .tf__about_page_welcome_img .call_area {
+        padding: 15px;
+        top: auto;
+        bottom: 20px;
+        transform: translate(0);
+        -webkit-transform: translate(0);
+        -moz-transform: translate(0);
+        -ms-transform: translate(0);
+        -o-transform: translate(0);
+        width: 80%;
+    }
+
+    .tf__about_page_welcome_img .call p {
+        width: 75%;
+    }
+
+    .tf__about_page_welcome_img .call p span {
+        display: inline-block;
+        font-weight: 600;
+    }
+
+    .tf__about_page_welcome_text h2,
+    .tf__about_page_welcome_text h3,
+    .tf__about_page_welcome_text h4,
+    .tf__about_page_welcome_text h5 {
+        font-size: 35px;
+    }
+
+    .tf__about_page_about_img .img_1 {
+        height: 500px;
+        margin-bottom: 35px;
+        width: 450px;
+    }
+
+    .tf__about_page_about_img .img_2 {
+        width: 300px;
+        height: 230px;
+    }
+
+    .tf__about_page_about_text a {
+        margin-top: 20px;
+    }
+
+    .tf__mission_text h3 {
+        font-size: 35px;
+    }
+
+    .tf__mission_video_area {
+        height: 230px;
+        margin-bottom: 250px;
+    }
+
+    .tf__mission_video {
+        padding: 10px;
+        bottom: -130px;
+        height: 350px;
+    }
+
+    .tf__vission_img_large {
+        height: 400px;
+        margin-top: 25px;
+    }
+
+    .tf_partnership h2 {
+        font-size: 35px;
+    }
+
+    .tf_partner_single {
+        height: 350px;
+    }
+
+    .tf_partner_overlay h3 {
+        font-size: 20px;
+    }
+
+    .tf__award_img {
+        height: 370px;
+    }
+
+    .tf__award_img .award_small_img {
+        width: 250px;
+        height: 180px;
+    }
+
+    .tf__award_text h4 {
+        font-size: 35px;
+        margin-top: 25px;
+    }
+
+    .tf__award_text ul li,
+    .tf__award_text ol li {
+        width: 100%;
+    }
+
+    .tf__about_page_about_text {
+        margin-top: 55px;
+    }
+
+    /*================================
+        ABOUT PAGE END
+    ================================*/
+
+
 }
 
 
@@ -789,12 +1124,6 @@
         HOME PAGE START
     ================================*/
     /* topbar start */
-    .tf__topbar {
-        height: auto;
-        padding: 5px 0px 7px 0px;
-        position: static;
-    }
-
     .tf__topbar_left {
         justify-content: center !important;
     }
@@ -803,14 +1132,12 @@
         display: none;
     }
 
-
     .tf__topbar_left li a i,
     .tf__topbar_left li p i {
         width: 25px;
         height: 25px;
         line-height: 27px;
-        margin-right: 0;
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .tf__topbar_right {
@@ -823,7 +1150,6 @@
     /* menu start */
     .main_menu {
         height: 75px;
-        top: 60px;
         border-bottom: 1px solid var(--colorPrimary);
     }
 
@@ -885,7 +1211,7 @@
     /* banner start */
     .tf__banner {
         height: auto;
-        padding-top: 72px;
+        padding-top: 124px;
         overflow: hidden;
     }
 
@@ -1268,6 +1594,181 @@
         HOME PAGE END
     ================================*/
 
+    /*================================
+        404 PAGE START
+    ================================*/
+    .tf___404 {
+        padding-top: 74px;
+    }
+
+    .tf___404_text .img {
+        width: 300px;
+        height: 160px;
+        margin: 0 auto;
+    }
+
+    .tf___404_text h4 {
+        font-size: 25px;
+    }
+
+    /*================================
+        404 PAGE END
+    ================================*/
+
+
+    /*================================
+        ABOUT PAGE START
+    ================================*/
+    .tf__breadcrumb {
+        margin-top: 124px;
+    }
+
+    .tf__breadcrumb_text h1 {
+        font-size: 35px;
+    }
+
+    .tf__breadcrumb_text ul li a {
+        font-size: 16px;
+    }
+
+    .tf__breadcrumb_overlay {
+        padding: 75px 0px 72px 0px;
+    }
+
+    .tf__about_page_welcome_img {
+        height: 500px;
+        padding-right: 0;
+        width: 450px;
+        margin-bottom: 20px;
+    }
+
+    .tf__about_page_welcome_img .call_area {
+        padding: 15px;
+        top: auto;
+        bottom: 20px;
+        transform: translate(0);
+        -webkit-transform: translate(0);
+        -moz-transform: translate(0);
+        -ms-transform: translate(0);
+        -o-transform: translate(0);
+        width: 80%;
+    }
+
+    .tf__about_page_welcome_img .call p {
+        font-size: 14px;
+        width: 76%;
+    }
+
+    .tf__about_page_welcome_img .call p span {
+        display: inline-block;
+        font-weight: 600;
+    }
+
+    .tf__about_page_welcome_img .call_area h4 {
+        font-size: 14px;
+    }
+
+    .tf__about_page_welcome_img .call_area h4 span {
+        font-size: 13px;
+    }
+
+    .tf__about_page_welcome_text h2,
+    .tf__about_page_welcome_text h3,
+    .tf__about_page_welcome_text h4,
+    .tf__about_page_welcome_text h5 {
+        font-size: 30px;
+    }
+
+    .tf_about_2_text ul li,
+    .tf_about_2_text ol li,
+    .tf__about_page_welcome_text ul li,
+    .tf__about_page_welcome_text ol li,
+    .tf__services_details_text ul li,
+    .tf__services_details_text ol li {
+        width: 100%;
+    }
+
+    .tf__about_page_about_img .img_1 {
+        height: 400px;
+        margin-bottom: 35px;
+    }
+
+    .tf__about_page_about_img .img_2 {
+        width: 250px;
+        height: 200px;
+        bottom: 20px;
+    }
+
+    .tf__about_page_about_img p {
+        font-size: 30px;
+        bottom: -10px;
+    }
+
+    .tf__about_page_about_img p span {
+        font-size: 16px;
+    }
+
+    .tf__about_page_about_text a {
+        margin-top: 20px;
+    }
+
+    .tf__mission_text h3 {
+        font-size: 30px;
+    }
+
+    .tf__mission_video_area {
+        height: 230px;
+        margin-bottom: 190px;
+    }
+
+    .tf__mission_video {
+        padding: 10px;
+        bottom: -130px;
+        height: 290px;
+    }
+
+    .tf__vission_img_large {
+        height: 290px;
+        margin-top: 25px;
+    }
+
+    .tf_partnership h2 {
+        font-size: 30px;
+    }
+
+    .tf_partner_single {
+        height: 250px;
+    }
+
+    .tf_partner_overlay h3 {
+        font-size: 20px;
+    }
+
+    .tf__award_img {
+        height: 370px;
+    }
+
+    .tf__award_img .award_small_img {
+        width: 250px;
+        height: 180px;
+    }
+
+    .tf__award_text h4 {
+        font-size: 30px;
+        margin-top: 25px;
+    }
+
+    .tf__award_text ul li,
+    .tf__award_text ol li {
+        width: 100%;
+    }
+
+    /*================================
+        ABOUT PAGE END
+    ================================*/
+
+
+
 }
 
 
@@ -1280,34 +1781,27 @@
         HOME PAGE START
     ================================*/
     /* topbar start */
-    .tf__topbar {
-        height: auto;
-        padding: 5px 0px 7px 0px;
-        position: static;
+    .tf__topbar_left {
+        justify-content: space-between;
     }
 
     .tf__topbar_left li:first-child {
         display: none;
     }
 
-    .tf__topbar_left li,
-    .tf__topbar_left li {
-        width: 100%;
-    }
-
     .tf__topbar_left li a,
     .tf__topbar_left li p {
         margin: 0;
-        line-height: 35px;
+        font-size: 12px;
     }
 
     .tf__topbar_left li a i,
     .tf__topbar_left li p i {
-        width: 25px;
-        height: 25px;
-        line-height: 27px;
-        margin-right: 0;
-        font-size: 13px;
+        width: auto;
+        height: auto;
+        line-height: initial;
+        font-size: 12px;
+        background: none;
     }
 
     .tf__topbar_right {
@@ -1320,7 +1814,6 @@
     /* menu start */
     .main_menu {
         height: 75px;
-        top: 81px;
         border-bottom: 1px solid var(--colorPrimary);
     }
 
@@ -1383,7 +1876,7 @@
     /* banner start */
     .tf__banner {
         height: auto;
-        padding-top: 74px;
+        padding-top: 124px;
         overflow: hidden;
     }
 
@@ -1811,6 +2304,188 @@
     /* footer end */
     /*================================
         HOME PAGE END
+    ================================*/
+
+
+    /*================================
+        404 PAGE START
+    ================================*/
+    .tf___404 {
+        padding-top: 74px;
+    }
+
+    .tf___404_text .img {
+        width: 300px;
+        height: 160px;
+        margin: 0 auto;
+    }
+
+    .tf___404_text h4 {
+        font-size: 25px;
+    }
+
+    /*================================
+        404 PAGE END
+    ================================*/
+
+
+    /*================================
+        ABOUT PAGE START
+    ================================*/
+    .tf__breadcrumb {
+        margin-top: 124px;
+    }
+
+    .tf__breadcrumb_text h1 {
+        font-size: 30px;
+    }
+
+    .tf__breadcrumb_text ul li a {
+        font-size: 13px;
+    }
+
+    .tf__breadcrumb_overlay {
+        padding: 75px 0px 72px 0px;
+    }
+
+    .tf__about_page_welcome_img {
+        height: 370px;
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 20px;
+        width: 300px;
+    }
+
+    .tf__about_page_welcome_img .call_area {
+        padding: 15px;
+        top: auto;
+        bottom: 20px;
+        transform: translate(0);
+        -webkit-transform: translate(0);
+        -moz-transform: translate(0);
+        -ms-transform: translate(0);
+        -o-transform: translate(0);
+    }
+
+    .tf__about_page_welcome_img .call p {
+        font-size: 14px;
+        width: 76%;
+    }
+
+    .tf__about_page_welcome_img .call p span {
+        display: inline-block;
+        font-weight: 600;
+    }
+
+    .tf__about_page_welcome_img .call_area h4 {
+        font-size: 14px;
+    }
+
+    .tf__about_page_welcome_img .call_area h4 span {
+        font-size: 13px;
+    }
+
+    .tf__about_page_welcome_text h2,
+    .tf__about_page_welcome_text h3,
+    .tf__about_page_welcome_text h4,
+    .tf__about_page_welcome_text h5 {
+        font-size: 25px;
+    }
+
+    .tf_about_2_text ul li,
+    .tf_about_2_text ol li,
+    .tf__about_page_welcome_text ul li,
+    .tf__about_page_welcome_text ol li,
+    .tf__services_details_text ul li,
+    .tf__services_details_text ol li {
+        width: 100%;
+    }
+
+    .tf__about_page_about_img .img_1 {
+        width: auto;
+        height: 300px;
+        margin-bottom: 35px;
+    }
+
+    .tf__about_page_about_img .img_2 {
+        width: 200px;
+        height: 140px;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .tf__about_page_about_img p {
+        font-size: 30px;
+        bottom: -10px;
+        right: auto;
+        left: 0;
+    }
+
+    .tf__about_page_about_img p span {
+        font-size: 15px;
+    }
+
+    .tf__about_page_about_text a {
+        margin-top: 20px;
+    }
+
+    .tf__mission_text h3 {
+        font-size: 25px;
+    }
+
+    .tf__mission_video_area {
+        height: 230px;
+        margin-bottom: 110px;
+    }
+
+    .tf__mission_video {
+        padding: 10px;
+        bottom: -130px;
+        height: 210px;
+    }
+
+    .tf__vission_img_large {
+        height: 170px;
+        margin-top: 25px;
+    }
+
+    .tf_partnership h2 {
+        font-size: 25px;
+    }
+
+    .tf_partner_single {
+        height: 250px;
+    }
+
+    .tf_partner_overlay h3 {
+        font-size: 20px;
+    }
+
+    .tf__award_img {
+        padding: 10px;
+        margin-right: 0;
+        height: 300px;
+    }
+
+    .tf__award_img .award_small_img {
+        width: 220px;
+        height: 150px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .tf__award_text h4 {
+        font-size: 25px;
+        margin-top: 25px;
+    }
+
+    .tf__award_text ul li,
+    .tf__award_text ol li {
+        width: 100%;
+    }
+
+    /*================================
+        ABOUT PAGE END
     ================================*/
 
 
