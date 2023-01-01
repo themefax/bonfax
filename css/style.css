@@ -2651,7 +2651,7 @@ button {
 
 .tf__breadcrumb_overlay {
     background: linear-gradient(180deg, rgba(250, 163, 146, 0.6) 0%, rgba(0, 38, 51, 0.6) 57.04%);
-    padding: 125px 0px 125px 0px;
+    padding: 125px 0px 130px 0px;
 }
 
 .tf__breadcrumb_text h1 {
@@ -4222,7 +4222,7 @@ button {
     BLOG DETAILS START
 ================================*/
 .tf__blog_details_img {
-    height: 400px;
+    height: 450px;
     overflow: hidden;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -4744,7 +4744,7 @@ button {
     top: 0px;
     left: 50%;
     transform: translateX(-50%);
-    clip-path: polygon(0 20%, 50% 0, 100% 20%, 100% 55%, 50% 100%, 0 55%);
+    clip-path: polygon(0 20%, 50% 0, 100% 20%, 100% 54%, 50% 100%, 0 53%);
     transition: all linear .3s;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
@@ -5402,7 +5402,7 @@ button {
 }
 
 .tf__faq_text p {
-    margin: 20px 0px;
+    margin-top: 20px;
 }
 
 .accordion-item {
@@ -5505,8 +5505,7 @@ button {
 .tf__terms_condition_text h6 {
     font-weight: 700;
     text-transform: capitalize;
-    margin: 25px 0px;
-    line-height: 47px;
+    margin: 25px 0px 20px 0px;
 }
 
 .tf__terms_condition_text h1 {
@@ -5937,7 +5936,6 @@ button {
     background-repeat: no-repeat !important;
     background-size: cover !important;
     height: 100vh;
-    overflow: hidden;
 }
 
 .wsus__banner_2 div {
@@ -6038,6 +6036,11 @@ button {
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
+}
+
+.home_2 .common_btn::after,
+.home_2 .common_btn::before {
+    display: none;
 }
 
 /* banner 2 end */
@@ -6335,10 +6338,14 @@ button {
 }
 
 .tf__category_2_single_text {
-    background: #FFF5F4;
-    border-radius: 5px;
-    clip-path: polygon(50% 0, 50% 0, 100% 20%, 100% 80%, 50% 100%, 50% 100%, 0% 80%, 0 20%);
-    padding: 120px 25px 100px 25px;
+    background: url(../images/category_2_bg_1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 260px;
+    height: 304px;
+    padding: 0px 20px;
+    margin: 0 auto;
     text-align: center;
     position: relative;
     transition: all linear .3s;
@@ -6346,10 +6353,30 @@ button {
     -moz-transition: all linear .3s;
     -ms-transition: all linear .3s;
     -o-transition: all linear .3s;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tf__category_2_single_text::after {
+    position: absolute;
+    content: "";
+    background: url(../images/category_2_bg_2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
 }
 
 .tf__category_2_single_text h4 {
@@ -6358,7 +6385,7 @@ button {
     font-weight: 700;
     text-transform: capitalize;
     color: var(--colorBlack);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     transition: all linear .3s;
     -webkit-transition: all linear .3s;
     -moz-transition: all linear .3s;
@@ -6380,7 +6407,11 @@ button {
 }
 
 .tf__category_2_single:hover .tf__category_2_single_text {
-    background: var(--colorPrimary);
+    background: transparent;
+}
+
+.tf__category_2_single:hover .tf__category_2_single_text::after {
+    opacity: 1;
 }
 
 .tf__category_2_single:hover span {
@@ -6774,6 +6805,10 @@ button {
     text-align: center;
 }
 
+.tf__gallery_filter_2 {
+    text-align: center;
+}
+
 .tf__gallery_filter_2 button {
     font-size: 16px;
     font-weight: 400;
@@ -6806,7 +6841,7 @@ button {
 }
 
 .tf__gallery_item_2 .gal_img_overlay {
-    padding: 15px 20px;
+    padding: 15px 20px !important;
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
     bottom: 20px;
     border-radius: 5px;
@@ -6817,7 +6852,7 @@ button {
 }
 
 .tf__gallery_item_2 .venobox span {
-    bottom: 45px;
+    bottom: 45px !important;
 }
 
 /* gallery 2 end */
@@ -7166,7 +7201,7 @@ button {
 }
 
 .tf__single_blog_2_text .bloger_info li a {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
     text-transform: capitalize;
     color: var(--colorWhite);
@@ -7189,9 +7224,13 @@ button {
 .tf__single_blog_2_text .bloger_info li p {
     font-weight: 500;
     color: var(--colorWhite);
-    font-size: 14px;
+    font-size: 13px;
     margin: 0;
     padding: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .tf__single_blog_2_text .title {

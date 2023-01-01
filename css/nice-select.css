@@ -155,12 +155,15 @@
   list-style: none;
   min-height: 40px;
   outline: none;
-  padding-left: 18px;
-  padding-right: 29px;
+  padding-left: 18px !important;
+  padding-right: 29px !important;
   text-align: left;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   text-transform: capitalize;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
 }
 
 .nice-select .option:hover,

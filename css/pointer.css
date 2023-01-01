@@ -6,7 +6,7 @@
     border: 2.5px solid #efc2ba !important;
     position: fixed;
     border-radius: 4px;
-    z-index: 101;
+    z-index: 9999999;
     pointer-events: none;
     transition: border-color 0.5s;
     -webkit-transition: border-color 0.5s;
@@ -24,7 +24,7 @@
     border: 2px solid #efc2ba !important;
     position: fixed;
     border-radius: 100px;
-    z-index: 102;
+    z-index: 9999999;
     pointer-events: none;
 }
 
