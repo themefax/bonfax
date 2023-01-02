@@ -594,7 +594,8 @@ button {
     padding: 0px 15px;
 }
 
-.main_menu .menu_right li a:hover {
+.main_menu .menu_right li a:hover,
+.main_menu .menu_right li a.active {
     background: var(--colorPrimary);
     color: var(--colorWhite);
 }
@@ -6342,8 +6343,8 @@ button {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 260px;
-    height: 304px;
+    width: 290px;
+    height: 340px;
     padding: 0px 20px;
     margin: 0 auto;
     text-align: center;
